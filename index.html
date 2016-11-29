@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>three.js webgl - gpgpu - flocking</title>
+		<title>jychen's homepage</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/multi.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="css/fonts.css" type="text/css" charset="utf-8">
 		<style>
-			body {
+<!-- 			body {
 				background-color: #ffffff;
 				margin: 0px;
 				overflow: hidden;
@@ -14,38 +16,54 @@
 				text-align:center;
 				text-align:center;
 				cursor: pointer;
-			}
-
-			a {
-				color:#0078ff;
-			}
+			} -->
 
 			#info {
 				color: #000;
 				position: absolute;
-				top: 10px;
+				bottom: 5%;
 				width: 100%;
+                text-align:center;
+                font-size: 2em;
 			}
 			#info2 {
 				color: #000;
 				position: absolute;
 				top: 50%;
 				width: 100%;
+                
 			}
 
 		</style>
 	</head>
 	<body>
 
-		<div id="info">
-			<a href="http://threejs.org" target="_blank">three.js</a> - <span id="birds"></span> webgl gpgpu birds<br/>
-			Select <span id="options"></span> birds<br/>
-			Move mouse to disturb birds.
-		</div>
 
-		<div id="info2">
-		<a href="resume.html">点击查看个人简历</a><BR>
+        <div id="menucontainer">
+		 <div id="menu">
+		    <div onclick ="func1()"><b>个人简历</b></div>
+		    <div><b>博客</b></div>
+		    <div><b>随笔</b></div>
+		    <div><b>about</b></div>
+		 </div>
 		</div>
+        
+ 		<div id="info">
+            推荐Chrome、Firefox 等对HTML5支持较好的浏览器打开<br>
+            渲染是用GPU完成的<br>
+			可以用鼠标驱赶小鸟<br>
+            右上可以调节鸟群参数<br>			
+            Powered by three.js <br>
+            <span id="birds" style="display: none"></span>
+			<span id="options"style="display: none" ></span>
+		</div>
+        
+        <script>
+          function func1(){
+           return window.location.href = 'https://frams163com.github.io/resume.html';
+          }
+        </script>
+      
 		<script src="build/three.js"></script>
 		<script src="js/Detector.js"></script>
 		<script src="js/libs/stats.min.js"></script>
