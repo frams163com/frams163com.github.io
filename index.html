@@ -27,6 +27,9 @@
 	</head>
 
 	<body>
+        <div id=loading1>
+        loading
+        </div>
 		<div id="info">
 		<a href="drivers/index.html">点击进入老司机之家</a><BR>
         按住 A D 可以旋转视角<BR>
@@ -100,6 +103,7 @@
 					if ( xhr.lengthComputable ) {
 						var percentComplete = xhr.loaded / xhr.total * 100;
 						console.log( Math.round(percentComplete, 2) + '% downloaded' );
+                        document.getElementById("loading1").innerHTML = (Math.round(percentComplete, 2) + '% downloaded');  
 					}
 				};
 
@@ -136,8 +140,8 @@
 
 					}
 
-					//helper.unifyAnimationDuration( { afterglow: 2.0 } );
-
+					helper.unifyAnimationDuration( { afterglow: 2.0 } );
+					document.getElementById("loading1").style.visibility = 'hidden';
 					scene.add( mesh );
 
 				}, onProgress, onError );
@@ -150,7 +154,7 @@
 				window.addEventListener( 'resize', onWindowResize, false );
 
 			}
-
+            
 			function onWindowResize() {
 
 				windowHalfX = window.innerWidth / 2;
