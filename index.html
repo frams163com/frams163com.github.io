@@ -41,10 +41,9 @@
 
         <div id="menucontainer">
 		 <div id="menu">
+		    <div onclick ="func2()"><b>我的博客</b></div>
+		    <div onclick ="func3()"><b>老司机之家</b></div>
 		    <div onclick ="func1()"><b>个人简历</b></div>
-		    <div><b>博客</b></div>
-		    <div><b>随笔</b></div>
-		    <div><b>about</b></div>
 		 </div>
 		</div>
         
@@ -60,10 +59,17 @@
         
         <script>
           function func1(){
-           return window.location.href = 'https://frams163com.github.io/resume.html';
+            return window.location.href = 'https://frams163com.github.io/resume.html';
+          }
+
+          function func2(){
+            return window.location.href = 'https://frams163com.github.io/blog/index.html';
+          }
+          
+          function func3(){
+            return window.location.href = 'https://frams163com.github.io/drivers/index.html';
           }
         </script>
-      
 		<script src="build/three.js"></script>
 		<script src="js/Detector.js"></script>
 		<script src="js/libs/stats.min.js"></script>
